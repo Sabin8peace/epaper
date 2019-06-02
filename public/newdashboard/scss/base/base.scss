@@ -1,0 +1,192 @@
+
+.z-index {
+    z-index: 9999
+}
+.mrt30{
+    margin-top:30px;
+}
+.mrb30{
+    margin-bottom: 30px;
+}
+.m-l-10,
+.dropdown-menu ul.menu .menu-info,
+.mcard_2 .user .details,
+.contact .c_list .c_name {
+    margin-left: 10px
+}
+ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+.margin-0,
+.card .header .header-dropdown,
+.card .header h2,
+.media .media-body .media-heading,
+.wizard .content,
+.wizard .content .body label.error,
+.dropdown-menu ul.menu .menu-info h4,
+.dropdown-menu ul.menu .menu-info p,
+.profile_state {
+    margin: 0 !important
+}
+
+.p-l-0,
+.sidebar .menu .list,
+.sidebar .menu .list .ml-menu,
+.dropdown-menu ul.menu,
+.invoice .nav-tabs {
+    padding-left: 0px
+}
+
+
+.block-header {
+    padding: 10px 15px;
+    border-bottom:1px solid rgba($color-primary, 0.2);
+    margin-bottom: 30px;
+    .form-group{
+        float: right;
+        margin-right: 10px;
+        .select-option {
+            position: relative;
+            min-width: 150px !important;
+            display: inline-block;
+            &::after {
+                content:'\f110';
+                font-family: "LineAwesome";
+                position: absolute;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                right: 10px;
+                color: $color-secondary;
+            }
+        }
+        .select2-container--default 
+            .select2-selection--multiple,
+            .select2-container--default  .select2-selection--single{
+                background-color: $color-bg;
+                border:1px solid rgba($color-primary, 0.2);
+                height: calc(2.25rem + 2px);
+                min-width: 150px !important;
+                padding: .375rem 1.75rem .375rem .75rem;
+                .select2-selection__rendered{
+                    color:$color-primary;
+                }
+                .select2-selection__choice{
+                    background:transparent;
+                    border:none;
+                    margin-top:0;
+                }
+                .select2-selection__arrow{
+                    display: none;
+                }
+                
+            }
+    }
+    h2 {
+        font-size: 1.5rem;
+        margin: 0 !important;
+        font-weight: 700;
+    }
+    .breadcrumb {
+        background: transparent;
+        font-size: 0.875rem;
+        margin-bottom: 0;
+        li.breadcrumb-item{
+            small {
+                display: block;
+                margin-top: 8px;
+                a {
+                    font-weight: 700;
+                }
+            }
+            &.active{
+                color:$color-secondary;
+            }
+        }
+    }
+    a.btn{
+        color:$color-white;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .block-header .col-lg-5.col-md-6.col-sm-12 {
+        display: none
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .block-header .right_icon_toggle_btn {
+        display: none
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .block-header {
+        h2 {
+            font-size: 1rem
+        }
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .block-header .breadcrumb {
+        font-size: 12px
+    }
+    .block-header .breadcrumb i {
+        font-size: 14px
+    }
+}
+.card {
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    border: 0;
+    position: relative;
+    width: 100%;
+    box-shadow: none;
+    background: transparent;
+    .card-header{
+        background-color: $color-white;
+    }
+    .body{
+        font-weight: 400;
+        border-radius: .35rem;
+        background: $color-light;
+        font-size: 14px;
+        color: $color-primary;
+        padding: 20px;
+    }
+}
+section.content {
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+    background: $color-bg;
+    position: relative;
+    margin: 20px 70px 20px 260px;
+    box-shadow: 0 0 16px rgba(41, 42, 51, 0.06), 0 6px 20px rgba(41, 42, 51, 0.02)
+}
+
+
+
+
+
+

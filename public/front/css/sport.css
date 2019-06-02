@@ -1,0 +1,336 @@
+                .sports {
+                    margin: 30px 0;
+                }
+                
+                .sport {
+                    display: grid;
+                    grid-template-columns: 3fr 1fr;
+                    grid-gap: 20px;
+                    margin: 0px 20px 20px 20px;
+                }
+                
+                section .section-title {
+                    text-align: center;
+                    margin-bottom: 50px;
+                    text-transform: uppercase;
+                }
+                
+                .right-nav-tab #tabs h6.section-title {
+                    color: rgba(0, 0, 0, 0.70);
+                }
+                
+                .right-nav-tab .nav-tabs .nav-link {
+                    border: 1px solid #ccc;
+                    border-radius: 0;
+                    color: rgba(0, 0, 0, 0.70);
+                    font-size: 14px;
+                }
+                
+                .right-nav-tab #tabs .nav-tabs .nav-item.show .nav-link,
+                .right-nav-tab .nav-tabs .nav-link.active {
+                    background-color: transparent;
+                    border: 1px solid #ccc;
+                    border-bottom: 2px solid var(--forred)!important;
+                    font-family: var(--medium);
+                    font-size: 16px;
+                    padding: 6px 2px !important;
+                    /* font-weight: 600; */
+                }
+                
+                .must-read-header hr {
+                    width: 50px;
+                    border: 1px solid #000;
+                }
+                
+                .trendings {
+                    display: grid;
+                    grid-template-columns: 1fr 1.4fr;
+                    grid-gap: 10px;
+                    margin: 0 0 15px 0;
+                }
+                
+                .trendings i {
+                    color: #1b77d3;
+                }
+                
+                .trendings .trand {
+                    font-size: 13px;
+                    font-family: var(--medium);
+                    /* font-weight: 500; */
+                    margin: 0 0 2px 0;
+                    color: rgba(0, 0, 0, 0.70);
+                }
+                
+                @media screen and (max-width: 1123px) {
+                    .right-nav-tab #tabs .nav-tabs .nav-link {
+                        font-size: 12px;
+                    }
+                    .trendings .trand {
+                        font-size: 11px;
+                    }
+                }
+                /* first add start */
+                
+                .first-add {
+                    margin: 10px 0;
+                }
+                /* second add start */
+                
+                .second-add img,
+                .third-add img {
+                    margin: 10px 0;
+                }
+                /* second add end */
+                /* must read start */
+                
+                .must-read {
+                    background: #F7F7F7;
+                    padding: 10px 10px 25px 10px;
+                    margin: 20px 0;
+                }
+                
+                .read {
+                    display: grid;
+                    grid-template-columns: 1fr 9fr 3fr;
+                    border-bottom: 1px solid #ccc;
+                    padding: 5px;
+                }
+                
+                .read1 {
+                    font-family: var(--extrabold);
+                    /* font-weight: bolder; */
+                }
+                
+                .must-read-header {
+                    font-size: 13px;
+                    font-family: var(--medium);
+                    /* font-weight: 600; */
+                }
+                
+                .must-read-body {
+                    background: #fff;
+                    padding: 10px 5px;
+                    font-size: 13px;
+                    font-family: var(--regular);
+                    /* font-weight: 500; */
+                    border: 1px solid #eee;
+                    box-shadow: 0 4px 2px -2px gray;
+                    border-radius: 8px;
+                }
+                /* must read end */
+                /* recommended start */
+                
+                section .section-title {
+                    text-align: center;
+                    /* color: #007b5e; */
+                    margin-bottom: 50px;
+                    text-transform: uppercase;
+                }
+                
+                .right-nav-tab #tabs h6.section-title {
+                    color: rgba(0, 0, 0, 0.70);
+                }
+                
+                .trendings {
+                    display: grid;
+                    grid-template-columns: 1fr 1.4fr;
+                    grid-gap: 10px;
+                    margin: 0 0 15px 0;
+                }
+                
+                .trendings i {
+                    color: #1b77d3;
+                }
+                
+                .trendings a .trand {
+                    font-size: 13px;
+                    font-family: var(--regular);
+                    /* font-weight: 500; */
+                    margin: 0 0 2px 0;
+                    color: rgba(0, 0, 0, 0.70);
+                }
+                
+                @media screen and (max-width: 1123px) {
+                    .trendings a .trand {
+                        font-size: 11px;
+                    }
+                }
+                /* recommended end */
+                /* sport start left */
+                
+                .sport-left .trendings {
+                    display: grid;
+                    grid-template-columns: 1fr 2.5fr;
+                    grid-gap: 10px;
+                    margin: 0 0 15px 0;
+                }
+                
+                .sport-left .trendings .trand {
+                    font-size: 22px;
+                    font-family: var(--bold);
+                }
+                
+                @media screen and (max-width: 1065px) {
+                    .sport-left .trendings .trand {
+                        font-size: 19px;
+                    }
+                }
+                
+                @media screen and (max-width: 1029px) {
+                    .sport-left .trendings .trand {
+                        font-size: 18px;
+                    }
+                    .sport-left .trendings {
+                        display: grid;
+                        grid-template-columns: 1fr 1.5fr;
+                    }
+                    .right-nav-tab #tabs .nav-tabs .nav-link {
+                        font-size: 10px;
+                    }
+                    .trendings .trand {
+                        font-size: 10px;
+                    }
+                    .trending2 small {
+                        font-size: 10px;
+                    }
+                }
+                
+                @media screen and (max-width: 936px) {
+                    .sport-left .trendings {
+                        display: grid;
+                        grid-template-columns: 1fr;
+                    }
+                    .sport {
+                        display: grid;
+                        grid-template-columns: 2fr 1fr;
+                        grid-gap: 20px;
+                        margin: 0px 20px 20px 20px;
+                    }
+                }
+                @media screen and (max-width: 800px){ 
+                .right-nav-tab .trendings {
+                    margin: 20px 0 !important;
+                }}
+                
+                @media screen and (max-width: 717px) {
+                    .sport {
+                        grid-template-columns: 1fr;
+                    }
+                    .right-nav-tab .trendings {
+                        grid-template-columns: 1fr 3fr;
+                        margin: 20px 80px;
+                    }
+                }
+                
+                @media screen and (max-width: 515px) {
+                    .trendings {
+                        grid-template-columns: 1fr 3fr;
+                        margin: 20px 40px;
+                    }
+                }
+                
+                @media screen and (max-width: 425px) {
+                    .trendings {
+                        grid-template-columns: 1fr 3fr;
+                        margin: 20px 10px;
+                    }
+                }
+                
+                @media screen and (max-width: 355px) {
+                    .trendings {
+                        grid-template-columns: 1fr 2fr;
+                        margin: 20px 0px;
+                    }
+                }
+                /* sport right  start*/
+                .sport{
+                    margin: 20px !important;
+                }
+                
+                .sport-left .description {
+                    font-size: 13px;
+                }
+                
+                .sport-left small,
+                .sport-left small i {
+                    color: #8f8f8f85;
+                }
+                
+                .sports-groups .trendings {
+                    margin: 20px 0;
+                }
+                /* pagination start */
+                
+                .pagination nav {
+                    margin: 20px auto;
+                }
+                /* border- bottom */
+                
+                .recommended-header,
+                .must-read-header {
+                    color: var(--secondary);
+                    font-weight: var(--bold);
+                    font-size: 18px;
+                    padding-bottom: 5px;
+                }
+                
+                .recommended-header h5,
+                .must-read-header h5 {
+                    letter-spacing: 0.16px;
+                    font-size: 16px;
+                    font-family: var(--medium);
+                    color: #434345;
+                    /* padding: 25px 5px; */
+                    border-bottom: 3px solid #e3e3e3;
+                    width: 100%;
+                }
+                
+                .recommended-header h5::after,
+                .must-read-header h5::after {
+                    /* top: 79px; */
+                    position: absolute;
+                    display: block;
+                    content: " ";
+                    background-color: var(--forred);
+                    width: 7%;
+                    height: 3px;
+                }
+                
+                .sports-groups .trendings {
+                    margin: 20px 0;
+                    border: 1px solid #ccc;
+                    padding: 10px;
+                    border-radius: 8px;
+                }
+                
+                .vedio-left1 {
+                    position: relative;
+                }
+                
+                .vdo .overlay {
+                    position: absolute;
+                    background: #0006;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                }
+                
+                .vdo .overlay i {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    /* background: #ff0000; */
+                    color: var( --forred);
+                    font-size: 20px;
+                    /* background: #fff; */
+                    /* background: #000; */
+                }
+                
+                .sport-left .trand:hover {
+                    color: var(--secondary);
+                }
+
+                .sport-left .trendings img{
+                    height: 200px;
+                }

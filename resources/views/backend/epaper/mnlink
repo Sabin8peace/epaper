@@ -1,0 +1,208 @@
+<html>
+
+<head>
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="{{ asset('vendor/adminlte/vendor/bootstrap/dist/css/bootstrap.min.css') }}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{ asset('vendor/adminlte/vendor/font-awesome/css/font-awesome.min.css') }}">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <style>
+        #canvas {
+
+            width: 2000px;
+            height: 2000px;
+            border: 10px solid transparent;
+
+        }
+
+        .rectangle {
+            border: 2px solid #0066ff;
+            position: absolute;
+        }
+
+        body {
+            margin: 0;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <div class="col-md-6">
+        <p id="canvas" style="width:500px; height:600px; border:1px solid #000 ">
+            <img src="{{asset('/news_epaper/'.$data->image)}}" alt="The Giant Prawn at Ballina" usemap="#bigthings"
+                width="500" height="600" />
+        </p>
+        <map name="bigthings" id="bigthings">
+            <area title="area selected already" shape="rect" onmouseover="this.focus();" onmouseout="this.blur();"
+                id="star" coords="72,83,177,172" href="#" alt="The VW Kombi, another Aussie icon" />
+            <area title="area selected already" shape="rect" onmouseover="this.focus();" onmouseout="this.blur();"
+                id="star" coords="272,106,201,250" href="#" alt="The VW Kombi, another Aussie icon" />
+        </map>
+
+    </div>
+    <div class="col-md-5" style="margin-top:20px">
+        {{-- <div style="width:400px; height:500px;"> --}}
+
+        <form action="{{route('epaper.store')}}" method="POST" enctype="multipart/form-data" id="valid_form">
+
+
+            <div class="multi-fields">
+                <div class="multi-field-wrapper">
+                    <div class="col-md-2 col-md-offset-10">
+                        <button type="button" class="add-field btn btn-success"><i class="fa fa-plus"> Add More
+                                Field</i>
+                        </button>
+                    </div>
+
+                    <div class="multi-fields">
+                        <div class="multi-field">
+
+                            <input type="file" name="image" placeholder="enter as">
+
+                            <button style="width:40px; float:right;" type="button"
+                                class="remove-field btn btn-danger form-control col-md-2 col-lg-2"><i
+                                    class="fa fa-times"></i>
+                            </button>
+
+                            <br>
+                        </div>
+                    </div>
+
+                </div>
+                <hr style="border:solid 2px black">
+                <div class="row" style="padding:10px">
+                    <table style="width:100%">
+                        <tr>
+                            <th> </th>
+                            <th class=" pull-right">
+                                <button class="btn btn-success form-control">Submit</button> </th>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+         </form>
+
+
+
+        {{-- </div> --}}
+
+    </div>
+    </div>
+
+
+
+    <script>
+        initDraw(document.getElementById('canvas'));
+
+
+
+        function initDraw(canvas) {
+            function setMousePosition(e) {
+                var ev = e || window.event; //Moz || IE
+                if (ev.pageX) { //Moz
+                    mouse.x = ev.pageX;
+                    //+ window.pageXOffset;
+                    mouse.y = ev.pageY;
+                    // + window.pageYOffset;
+                } else if (ev.clientX) { //IE
+                    mouse.x = ev.clientX;
+                    //+ document.body.scrollLeft;
+                    mouse.y = ev.clientY;
+                    //+ document.body.scrollTop;
+                }
+            };
+
+            var mouse = {
+                x: 0,
+                y: 0,
+                startX: 0,
+                startY: 0
+            };
+            var element = null;
+            var add = '';
+
+            canvas.onmousemove = function (e) {
+                setMousePosition(e);
+                if (element !== null) {
+                    element.style.width = Math.abs(mouse.x - mouse.startX) + 'px';
+                    element.style.height = Math.abs(mouse.y - mouse.startY) + 'px';
+                    element.style.left = (mouse.x - mouse.startX < 0) ? mouse.x + 'px' : mouse.startX + 'px';
+                    element.style.top = (mouse.y - mouse.startY < 0) ? mouse.y + 'px' : mouse.startY + 'px';
+
+                    // add='<area shape="rect"' + 'coords='+coorde +" "+ 'alt="Sun" href="sun.htm" >';
+                    //console.log(add);
+
+
+
+
+                }
+            }
+
+            canvas.onclick = function (e) {
+                if (element !== null) {
+                    element = null;
+                    canvas.style.cursor = "default";
+                    console.log("finsihed.");
+                    var x = mouse.startX;
+                    var y = mouse.startY;
+                    var width = mouse.x;
+                    var height = mouse.y;
+                    var coorde = x + ',' + y + ',' + width + ',' + height;
+                    console.log(coorde);
+                    add =
+                        '<area title="area selected already" shape="rect"  onmouseover="this.focus();" onmouseout="this.blur();" id="star"' +
+                        ' coords="' + coorde + '" href="#" alt="image" />';
+
+                    //   add = '<area shape="rect"' + 'coords=' + coorde + " " + 'alt="Sun" href="#/" >';
+                    //$('#bigthings').appendChild(add)
+                    //   bigthings.appendChild(add)
+                    drawrect(add);
+                } else {
+                    console.log("begun.");
+                    mouse.startX = mouse.x;
+                    mouse.startY = mouse.y;
+                    element = document.createElement('div');
+                    element.className = 'rectangle'
+                    element.style.left = mouse.x + 'px';
+                    element.style.top = mouse.y + 'px';
+
+                    canvas.appendChild(element)
+                    canvas.style.cursor = "crosshair";
+                }
+            }
+        }
+
+        function drawrect(add) {
+            $("map").append(add);
+            // alert(add);
+        }
+
+    </script>
+    <script>
+        $('.multi-field-wrapper').each(function () {
+            var $wrapper = $('.multi-fields', this);
+
+            $(".add-field", $(this)).click(function (e) {
+                var a = $('.multi-field:first-child', $wrapper).clone(true).appendTo($wrapper).find(
+                    'select').val('').focus();
+                //a.attr('id','abcd');
+
+            });
+            $('.multi-field .remove-field', $wrapper).click(function () {
+                if ($('.multi-field', $wrapper).length > 1)
+                    $(this).parent('.multi-field').remove();
+            });
+        });
+
+    </script>
+</body>
+
+</html>

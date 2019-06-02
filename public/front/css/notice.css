@@ -1,0 +1,42 @@
+.sports-groups {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.sport-left .trendings {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    margin: 0 0 15px 0;
+}
+
+.sport-left .trendings a .trand {
+    font-size: 19px;
+}
+
+.sport-left .trendings {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    margin: 0 0 15px 0;
+    border: 1px solid #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #efefef;
+}
+
+@media screen and (max-width: 1000px) {
+    .sports-groups {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 936px) {
+    .sports-groups {
+        grid-template-columns: 1fr;
+    }
+    .sport-left .trendings img {
+        height: auto;
+    }
+}

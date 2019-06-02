@@ -1,0 +1,128 @@
+.main-body-horoscope .today-horoscope {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.main-body-horoscope .devide-one {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.main-body-horoscope .horosscopes {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
+}
+
+.main-body-horoscope .horoscopes-header {
+    color: var(--primary);
+}
+
+.main-body-horoscope .main-body .grid-container {
+    margin: 30px 30px 10px 30px;
+}
+
+.main-body-horoscope .horoscope-discription {
+    text-align: justify;
+}
+
+.main-body-horoscope .main-body hr {
+    border: 1px solid #ccc;
+    margin: 0 30px !important;
+}
+
+.main-body-horoscope .divide-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.main-body-horoscope .todays-horoscope-left h3 {
+    font-size: 20px;
+    font-family: var(--bold);
+    color: var(--primary);
+}
+
+.main-body-horoscope .tab-content {
+    margin: 0 30px;
+}
+
+.main-body-horoscope .nav-link {
+    display: block;
+    padding: 0px 14px;
+}
+
+.main-body-horoscope #tabs .nav-tabs .nav-link {
+    background: var(--primary);
+    border-radius: 4px;
+    color: #fff;
+    font-size: 20px;
+    margin: 0 10px;
+    outline: none;
+}
+
+.main-body-horoscope .nav-tabs {
+    border-bottom: none;
+}
+
+.main-body-horoscope #tabs .nav-tabs .nav-item.show .nav-link,
+.main-body-horoscope .nav-tabs .nav-link.active,
+.main-body-horoscope .nav-item:hover {
+    border: 2px solid var(--primary) !important;
+    font-size: 20px;
+    background: #fff !important;
+    /* font-weight: bold; */
+    font-family: var(--bold);
+    color: var(--primary)!important;
+}
+
+@media screen and (max-width: 871px) {
+    .main-body-horoscope .todays-horoscope-left h3 {
+        font-size: 20px;
+    }
+    .main-body-horoscope .today-horoscope {
+        /* display: grid; */
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 15px;
+    }
+}
+
+@media screen and (max-width: 845px) {
+    .main-body-horoscope .divide-two {
+        grid-template-columns: 1fr;
+    }
+    .main-body-horoscope .horosscopes {
+        grid-template-columns: 3fr 1fr;
+    }
+    .main-body-horoscope .today-horoscope {
+        grid-template-columns: 1fr;
+        grid-gap: 18px;
+    }
+    .main-body-horoscope .todays-horoscope-left h3 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .main-body-horoscope .horosscopes {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+@media screen and (max-width: 466px) {
+    .main-body-horoscope .nav-item {
+        width: 100%;
+        margin: 10px !important;
+    }
+    .main-body-horoscope .tab-content {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .main-body-horoscope .horosscopes {
+        grid-template-columns: 4fr 1fr;
+    }
+}
+

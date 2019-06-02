@@ -1,0 +1,110 @@
+.today-horoscope {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.main-body-horoscope .date {
+    background: #b3b4b4cc;
+    padding: 10px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.devide-one {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 6px;
+    margin: 20px;
+}
+
+.horosscopes {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 10px;
+}
+
+.horoscopes-header {
+    color: var(--secondary);
+}
+
+.main-body .grid-container {
+    margin: 30px 30px 10px 30px;
+}
+
+.horoscope-discription {
+    text-align: justify;
+}
+
+.discription a {
+    padding: 20px;
+    color: #0a3866;
+}
+
+.comments-from-public {
+    margin: 50px 20px;
+}
+
+.heading {
+    padding-bottom: 9px;
+}
+
+.txt_3[type="text"] {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin: 10px 0 0;
+    padding: 10px 0 10px 5px;
+    width: 100%;
+    font-size: 18px;
+}
+
+.txt2[type="submit"] {
+    background: var(--primary) none repeat scroll 0 0;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    color: #fff;
+    /* font-size: 16px; */
+    /* font-style: normal; */
+    line-height: 35px;
+    margin: 10px 0;
+    padding: 0;
+    /* text-transform: uppercase; */
+    width: 150px;
+}
+
+.txt2:hover {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #232323;
+    transition: all 0.5s ease 0s;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 898px) {
+    .devide-one,
+    .comments-from-public {
+        margin: 20px;
+    }
+    .discription a {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .horosscopes {
+        grid-template-columns: 1fr;
+    }
+    .horoscopes-right img {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+    }
+}
+
+.todays-horoscope-left {
+    margin: 20px;
+}
+
+.todays-horoscope-left h3 {
+    font-size: 20px;
+    color: var(--primary);
+    font-family: var(--bold);
+}

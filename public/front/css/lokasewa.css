@@ -1,0 +1,296 @@
+                    .loksewa {
+                        background: #EFEFEF;
+                    }
+                    
+                    .loksewas {
+                        display: grid;
+                        grid-template-columns: 3fr 1fr;
+                        grid-gap: 30px;
+                        margin: 20px;
+                        padding: 40px 20px;
+                    }
+                    
+                    .loksewa-bottom h4 {
+                        font-family: var(--bold);
+                        color: var(--secondary);
+                    }
+                    
+                    #Iframe-Master-CC-and-Rs {
+                        max-width: 100%;
+                        max-height: 100%;
+                        overflow: hidden;
+                    }
+                    /* inner wrapper: make responsive */
+                    
+                    .responsive-wrapper {
+                        position: relative;
+                        height: 0;
+                    }
+                    
+                    .responsive-wrapper iframe {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        margin: 0;
+                        padding: 0;
+                        border: none;
+                    }
+                    
+                    .responsive-wrapper-wxh-572x612 {
+                        padding-bottom: 107%;
+                    }
+                    /* general styles */
+                    /* ============== */
+                    
+                    .set-border {
+                        border: 2px inset #b4b4b4;
+                    }
+                    
+                    .set-box-shadow {
+                        -webkit-box-shadow: 4px 4px 14px #b4b4b4;
+                        -moz-box-shadow: 4px 4px 14px #b4b4b4;
+                        box-shadow: 4px 4px 14px #b4b4b4;
+                    }
+                    
+                    .set-padding {
+                        padding: 10px;
+                    }
+                    /* .set-margin {
+      margin: 30px;
+    } */
+                    
+                    .center-block-horiz {
+                        margin-left: auto !important;
+                        margin-right: auto !important;
+                    }
+                    
+                    .questions-tannai {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-gap: 10px;
+                    }
+                    
+                    .hovereffect {
+                        width: 100%;
+                        /* height: 100%; */
+                        /* float: left; */
+                        overflow: hidden;
+                        position: relative;
+                        text-align: center;
+                        cursor: default;
+                    }
+                    
+                    .hovereffect .overlay {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        overflow: hidden;
+                        top: 0;
+                        left: 0;
+                        background-color: rgba(0, 0, 0, 0.6);
+                        opacity: 0;
+                        filter: alpha(opacity=0);
+                        -webkit-transform: translate(460px, -100px) rotate(180deg);
+                        -ms-transform: translate(460px, -100px) rotate(180deg);
+                        transform: translate(460px, -100px) rotate(180deg);
+                        -webkit-transition: all 0.2s 0.4s ease-in-out;
+                        transition: all 0.2s 0.4s ease-in-out;
+                    }
+                    
+                    .hovereffect img {
+                        display: block;
+                        position: relative;
+                        -webkit-transition: all 0.1s ease-in;
+                        transition: all 0.1s ease-in;
+                    }
+                    
+                    .hovereffect a.info {
+                        display: inline-block;
+                        text-decoration: none;
+                        padding: 7px 14px;
+                        text-transform: uppercase;
+                        color: #fff;
+                        border: 1px solid #fff;
+                        margin: 50% 0 0 0;
+                        background-color: transparent;
+                        -webkit-transform: translateY(-200px);
+                        -ms-transform: translateY(-200px);
+                        transform: translateY(-200px);
+                        -webkit-transition: all 0.2s ease-in-out;
+                        transition: all 0.2s ease-in-out;
+                    }
+                    
+                    .hovereffect:hover .overlay {
+                        opacity: 1;
+                        filter: alpha(opacity=100);
+                        -webkit-transition-delay: 0s;
+                        transition-delay: 0s;
+                        -webkit-transform: translate(0px, 0px);
+                        -ms-transform: translate(0px, 0px);
+                        transform: translate(0px, 0px);
+                    }
+                    
+                    .hovereffect:hover a.info {
+                        -webkit-transform: translateY(0px);
+                        -ms-transform: translateY(0px);
+                        transform: translateY(0px);
+                        -webkit-transition-delay: 0.2s;
+                        transition-delay: 0.2s;
+                    }
+                    
+                    .loksewa-left h6 {
+                        font-family: var(--semibold);
+                        padding: 10px 0;
+                        font-size: 16px;
+                    }
+                    /* .loksewa-archive-header h5 a {
+                        font-family: var(--bold);
+                        color: var(--secondary);
+                    } */
+                    /* .loksewa-archive-header {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        padding: 10px 0;
+                    } */
+                    /* .loksewa-archive-right h5 {
+                        text-align: right;
+                    } */
+                    
+                    .hovereffect h6 {
+                        padding: 10px 0;
+                        font-family: var(--bold);
+                        color: var(--primary);
+                    }
+                    
+                    .loksewa-add {
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        grid-gap: 10px;
+                        margin-top: 20px;
+                    }
+                    
+                    @media screen and (max-width: 1000px) {
+                        .questions-tannai {
+                            grid-template-columns: 1fr;
+                        }
+                    }
+                    
+                    @media screen and (max-width: 725px) {
+                        .loksewas {
+                            grid-template-columns: 1fr;
+                        }
+                        .questions-tannai {
+                            grid-template-columns: 1fr 1fr 1fr 1fr;
+                        }
+                    }
+                    
+                    @media screen and (max-width: 568px) {
+                        .questions-tannai {
+                            grid-template-columns: 1fr 1fr;
+                        }
+                    }
+                    
+                    @media screen and (max-width: 380px) {
+                        .loksewas {
+                            margin: 3px;
+                            padding: 20px 0;
+                        }
+                        .set-padding,
+                        .loksewa-left {
+                            padding: 0;
+                        }
+                    }
+                    
+                    .loksewa-descrip {
+                        display: grid;
+                        grid-template-columns: 3fr 1fr;
+                        grid-gap: 30px;
+                    }
+                    
+                    .loksewa-bottom {
+                        padding: 30px;
+                        background: #f2f2f2;
+                    }
+                    
+                    @media screen and (max-width: 575px) {
+                        .loksewa-descrip {
+                            grid-template-columns: 1fr;
+                        }
+                    }
+                    /* .loksewa-archive-header h5 {
+                        position: relative;
+                        padding: 20px 0;
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                    }
+                    
+                    .loksewa-archive-header {
+                        letter-spacing: 0.16px;
+                        font-family: var(--bold);
+                        color: var(--secondary);
+                        border-bottom: 3px solid #e3e3e3;
+                        width: 100%;
+                    }
+                    
+                    .loksewa-archive-header h5::after {
+                       
+                        top: 61px;
+                        position: absolute;
+                        display: block;
+                        content: " ";
+                        background-color: var( --forred);
+                        width: 50px;
+                        height: 3px;
+                    }
+                    
+                    
+                    .loksewa-archive-right {
+                        text-align: right;
+                    } */
+                    
+                    .loksewa-archive-header {
+                        position: relative;
+                        padding: 20px 0;
+                    }
+                    
+                    .loksewa-archive-header h5 {
+                        letter-spacing: 0.16px;
+                        font-family: var(--bold);
+                        /* font-weight: bold; */
+                        /* font-weight: var(--bold); */
+                        color: var(--secondary);
+                        border-bottom: 3px solid #e3e3e3;
+                        width: 100%;
+                    }
+                    
+                    .loksewa-archive-header h5:hover {
+                        color: var(--primary);
+                    }
+                    
+                    .loksewa-archive-header h5::after {
+                        /* top: 60.6px; */
+                        top: 61px;
+                        position: absolute;
+                        display: block;
+                        content: " ";
+                        background-color: var( --forred);
+                        width: 50px;
+                        height: 3px;
+                    }
+                    
+                    .loksewa-archive-header h5 {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        padding: 10px 0;
+                    }
+                    /* .horoscope .horoscope-header h5 a {
+    color: #fff;
+    text-align: center;
+    font-family: var(--semibold);
+} */
+                    
+                    .loksewa-archive-right {
+                        text-align: right;
+                    }

@@ -1,0 +1,36 @@
+.tenders {
+    margin: 50px 10px;
+}
+
+.tender {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-gap: 10px;
+}
+
+.tender1 ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.tender2 ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .tender1 ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .tender1 ul {
+        grid-template-columns: 1fr;
+    }
+    .tender {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,127 @@
+<html>
+
+<head>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <style>
+
+    #canvas {
+
+      width: 2000px;
+      height: 2000px;
+      border: 10px solid transparent;
+
+    }
+
+    .rectangle {
+      border: 2px solid #0066ff;
+      position: absolute;
+    }
+    body{
+        margin: 0;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <p id="canvas" style="width:500px; height:600px; border:1px solid #000 ">
+      <img
+      src="{{asset('/news_epaper/'.$data->image)}}"
+      alt="The Giant Prawn at Ballina" usemap="#bigthings" width="500" height="600" />
+      </p>
+  <map name="bigthings" id="bigthings">
+    <area title="area selected already" shape="rect"  onmouseover="this.focus();" onmouseout="this.blur();" id="star" coords="72,83,177,172" href="#" alt="The VW Kombi, another Aussie icon" />
+    <area title="area selected already" shape="rect"  onmouseover="this.focus();" onmouseout="this.blur();" id="star" coords="272,106,201,250" href="#" alt="The VW Kombi, another Aussie icon" />
+  </map>
+
+  <script>
+    initDraw(document.getElementById('canvas'));
+
+
+
+    function initDraw(canvas) {
+      function setMousePosition(e) {
+        var ev = e || window.event; //Moz || IE
+        if (ev.pageX) { //Moz
+          mouse.x = ev.pageX;
+          //+ window.pageXOffset;
+          mouse.y = ev.pageY;
+          // + window.pageYOffset;
+        } else if (ev.clientX) { //IE
+          mouse.x = ev.clientX;
+          //+ document.body.scrollLeft;
+          mouse.y = ev.clientY;
+          //+ document.body.scrollTop;
+        }
+      };
+
+      var mouse = {
+        x: 0,
+        y: 0,
+        startX: 0,
+        startY: 0
+      };
+      var element = null;
+      var add = '';
+
+      canvas.onmousemove = function (e) {
+        setMousePosition(e);
+        if (element !== null) {
+          element.style.width = Math.abs(mouse.x - mouse.startX) + 'px';
+          element.style.height = Math.abs(mouse.y - mouse.startY) + 'px';
+          element.style.left = (mouse.x - mouse.startX < 0) ? mouse.x + 'px' : mouse.startX + 'px';
+          element.style.top = (mouse.y - mouse.startY < 0) ? mouse.y + 'px' : mouse.startY + 'px';
+
+          // add='<area shape="rect"' + 'coords='+coorde +" "+ 'alt="Sun" href="sun.htm" >';
+          //console.log(add);
+
+
+
+
+        }
+      }
+
+      canvas.onclick = function (e) {
+        if (element !== null) {
+          element = null;
+          canvas.style.cursor = "default";
+          console.log("finsihed.");
+          var x = mouse.startX;
+          var y = mouse.startY;
+          var width = mouse.x;
+          var height = mouse.y;
+          var coorde = x + ',' + y + ',' + width + ',' + height;
+          console.log(coorde);
+            add='<area title="area selected already" shape="rect"  onmouseover="this.focus();" onmouseout="this.blur();" id="star"'+' coords="'+coorde+'" href="#" alt="image" />';
+
+        //   add = '<area shape="rect"' + 'coords=' + coorde + " " + 'alt="Sun" href="#/" >';
+          //$('#bigthings').appendChild(add)
+        //   bigthings.appendChild(add)
+        drawrect(add);
+        } else {
+          console.log("begun.");
+          mouse.startX = mouse.x;
+          mouse.startY = mouse.y;
+          element = document.createElement('div');
+          element.className = 'rectangle'
+          element.style.left = mouse.x + 'px';
+          element.style.top = mouse.y + 'px';
+
+          canvas.appendChild(element)
+          canvas.style.cursor = "crosshair";
+        }
+      }
+    }
+     function drawrect(add) {
+         $( "map" ).append( add);
+        // alert(add);
+    }
+  </script>
+</body>
+
+</html>

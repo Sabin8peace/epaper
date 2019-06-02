@@ -1,0 +1,36 @@
+.sport-left img{
+height: 200px;
+}
+@media screen and (max-width: 936px){ 
+.sport-left .trendings img {
+    height: 200px;}}
+    .must-watch img, .more-from-auther img{
+        height: 200px;
+    }
+
+    @media screen and (max-width: 1000px){ 
+        .must-watch img, .more-from-auther img {
+            height: 110px;
+        }    
+    }
+    @media screen and (max-width: 860px){ 
+        .must-watch img, .more-from-auther img {
+            height: 140px;
+        }    
+    }
+    @media screen and (max-width: 860px){ 
+        .must-watch img, .more-from-auther img {
+            height: 140px;
+        }    
+    }
+    @media screen and (max-width: 390px){ 
+        .must-watch img, .more-from-auther img {
+            height: auto;
+        }   
+        .public-rections img {
+            width: 100%;
+            height: 100%;
+           
+        } 
+    }
+   

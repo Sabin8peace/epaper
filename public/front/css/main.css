@@ -1,0 +1,79 @@
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body,
+p {
+    font-family: var(--regular);
+}
+
+a,
+a:hover {
+    color: #3f3a3a;
+    text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr {
+    margin: 0 !important;
+}
+
+:root {
+    --primary: #5582bd;
+    --secondary: #003366;
+    --forred: #ff0000;
+}
+
+@font-face {
+    font-family: bold;
+    src: url(Mukta/Mukta-Bold.ttf);
+}
+
+@font-face {
+    font-family: extrabold;
+    src: url(Mukta/Mukta-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: extralight;
+    src: url(Mukta/Mukta-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: light;
+    src: url(Mukta/Mukta-Light.ttf);
+}
+
+@font-face {
+    font-family: medium;
+    src: url(Mukta/Mukta-Medium.ttf);
+}
+
+@font-face {
+    font-family: regular;
+    src: url(Mukta/Mukta-Regular.ttf);
+}
+
+@font-face {
+    font-family: semibold;
+    src: url(Mukta/Mukta-SemiBold.ttf);
+}
+
+ :root {
+    --bold: bold;
+    --extrabold: extrabold;
+    --extralight: extralight;
+    --light: light;
+    --medium: medium;
+    --regular: regular;
+    --semibold: semibold;
+}

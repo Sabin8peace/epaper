@@ -1,0 +1,90 @@
+.banner img{
+    height: 500px;
+}
+.banner-title h1{
+    padding: 0 0 12px 0;
+}
+@media screen and (max-width: 800px) {
+    .banner img{
+        height: 350px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .banner img{
+        height: 300px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .banner img{
+        height: auto;
+    }
+}
+.business .business1 img{
+    height: 200px;
+}
+@media screen and (max-width: 400px) {
+    .business .business1 img{
+        height: auto;
+    }
+}
+.world .featcard img{
+    height: 350px;
+}
+.world .d-lg-block .card img{
+    height: 173px;
+}
+@media screen and (max-width:1095px) {
+    .world .featcard img{
+        height: 300px;
+    }
+    .world .d-lg-block .card img{
+        height: 148px;
+    }
+}
+@media screen and (max-width:936px) {
+    .world .featcard img{
+        height: 250px;
+    }
+    .world .d-lg-block .card img{
+        height: 123px;
+    }
+}
+@media screen and (max-width:767px) {
+    .world .featcard img,
+    .world .d-lg-block .card img{
+        height: 300px;
+    }
+    
+}
+@media screen and (max-width:400px) {
+    .world .featcard img,
+    .world .d-lg-block .card img{
+        height: 200px;
+    }
+    
+}
+.rajniti-agriculture img{
+    height: 300px;
+}
+@media screen and (max-width:1070px) {
+    .rajniti-agriculture img{
+        height: 200px;
+    }
+}
+.health-bottom img{
+height: 200px;
+}
+.healths .health-top img{
+    height: 400px;
+}
+
+@media screen and (max-width:985px) {
+    .healths .health-top img{
+        height: 314px;
+    }
+}
+@media screen and (max-width:700px) {
+    .healths .health-top img{
+        height: 200px;
+    }
+}
